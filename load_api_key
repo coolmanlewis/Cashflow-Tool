@@ -1,0 +1,9 @@
+import os
+
+# Retrieve API key from the environment
+rapidapi_key = os.getenv("RAPIDAPI_KEY")
+
+if not rapidapi_key:
+    raise ValueError("RAPIDAPI_KEY not found! Make sure it's set as an environment variable.")
+
+print(f"API Key Loaded Successfully: {rapidapi_key[:5]}********")
